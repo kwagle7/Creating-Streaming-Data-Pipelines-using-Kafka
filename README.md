@@ -61,3 +61,5 @@ bin/kafka-topics.sh --create --topic toll --bootstrap-server localhost:9092
 <img width="468" alt="image" src="https://github.com/kwagle7/Creating-Streaming-Data-Pipelines-using-Kafka/assets/13037108/c66aea09-f2a8-45e3-b912-44dceedd9f3e">
 
 Here, the streaming data is updated in the livetolldata table.
+<img width="823" alt="image" src="https://github.com/kwagle7/Creating-Streaming-Data-Pipelines-using-Kafka/assets/13037108/11ceed9e-9bf4-437b-835c-82ee6eb9768b">
+
