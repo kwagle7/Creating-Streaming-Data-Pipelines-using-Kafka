@@ -23,4 +23,41 @@ Create a streaming data pipe by performing these steps:
 wget https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz
 <img width="722" alt="image" src="https://github.com/kwagle7/Creating-Streaming-Data-Pipelines-using-Kafka/assets/13037108/967fc8c1-7221-4a8c-a518-4590c97b12a8">
 
-# Start Zookeeper in a separate 
+# Start Zookeeper in a separate terminal
+Zookeeper is required for Kafka to work. Start the Zookeeper server.
+ZooKeeper is responsible for the overall management of Kafka cluster.
+It monitors the Kafka brokers and notifies Kafka if any broker or partition goes down, or if a new broker or partition goes up.
+<pre>
+cd kafka_2.12-2.8.0
+bin/zookeeper-server-start.sh config/zookeeper.properties
+</pre>
+
+# Start the kafka server on different terminal
+Start a new terminal.
+Run the commands below. This will start the Kafka message broker service.
+<pre>
+cd kafka_2.12-2.8.0
+bin/kafka-server-start.sh config/server.properties
+</pre>
+
+# Create a topic
+You need to create a topic before you can start to post messages.
+to create a topic named news, start a new terminal and run the command below.
+<pre>
+cd kafka_2.12-2.8.0
+bin/kafka-topics.sh --create --topic toll --bootstrap-server localhost:9092
+</pre>
+
+# Run the toll traffic simulator
+
+<img width="642" alt="image" src="https://github.com/kwagle7/Creating-Streaming-Data-Pipelines-using-Kafka/assets/13037108/d740b5c1-c8ed-461c-8dec-e981e54fa42d">
+
+# Configure and Run the streaming data reader
+
+<img width="686" alt="image" src="https://github.com/kwagle7/Creating-Streaming-Data-Pipelines-using-Kafka/assets/13037108/5c1413aa-3382-4160-8be1-5cd114b152fa">
+
+# Check whether the data is updated/write in operation or not:
+
+<img width="468" alt="image" src="https://github.com/kwagle7/Creating-Streaming-Data-Pipelines-using-Kafka/assets/13037108/c66aea09-f2a8-45e3-b912-44dceedd9f3e">
+
+
